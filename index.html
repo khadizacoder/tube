@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH TUBE</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- daisy link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .active {
+            background-color: #FF1F3D;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <nav class="max-w-11/12 mx-auto flex justify-between py-5 items-center border-b-2 border-[#17171720]">
+                <div>
+                    <img class="w-30" src="./images/Logo.png" alt="">
+                </div>
+                <div class="sm:flex sm:justify-between sm:items-center">
+                    <div class="">
+                        <button class="btn text-[#252525] text-lg bg-[#25252520] px-5">
+                            <label class="input">
+                                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                                        stroke="currentColor">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.3-4.3"></path>
+                                    </g>
+                                </svg>
+                                <input id="search_input" type="search" required placeholder="Search" />
+                            </label>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn text-lg text-white bg-[#FF1F3D] px-5 hidden sm:flex">Sort By View</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- button -->
+        <nav>
+            <div id="category_container" class="flex justify-center items-center py-5 sm:gap-5 gap-2">
+                <button id="btn_all" onclick="loadVideos()"
+                    class="btn btn-sm text-[#252525] bg-[#25252520] hover:bg-[#FF1F3D] hover:text-white text-base px-3 sm:px-5">All</button>
+            </div>
+        </nav>
+        <!-- box container  -->
+        <div class="max-w-11/12 mx-auto flex items-center justify-center">
+            <div id="box_container"
+                class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-5 justify-center items-center">
+                <!-- NONE PAGE STYLE -->
+                <div class="flex flex-col col-span-full items-center justify-center text-center p-4 py-20">
+                    <img class="w-[120px]" src="images/Icon.png" alt="">
+                    <h2 class="font-bold text-2xl mt-2 mx-auto">Oops!! Sorry, There is no content here</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="display_modal" class="modal">
+            <div class="modal-box">
+                <div id="details_container"></div>
+            </div>
+        </dialog>
+    </section>
+
+    <!-- JavaScript link -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
