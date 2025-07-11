@@ -46,9 +46,9 @@ const displayVideoDetails = (video) => {
     const detailsContainer = document.getElementById('details_container');
 
     detailsContainer.innerHTML=`
-      <div class="card bg-base-100 image-full w-96 shadow-sm mx-auto">
+      <div class="card bg-base-100 image-full shadow-sm mx-auto">
         <figure>
-            <img class="w-full h-[170px]"
+            <img class="w-full h-[170px mx-auto]"
             src="${video.thumbnail}"
             alt="Movie" />
         </figure>
@@ -111,7 +111,7 @@ const displayVideos = (videos) => {
             <img class="w-full sm:h-auto md:h-[170px] rounded object-cover" src="${video.thumbnail}" alt="">
             <span class="absolute bottom-3 right-3 text-white bg-[#00000070] py-2 px-4 rounded text-sm">3hrs ago</span>
         </figure>
-        <div class="flex justify-left gap-2 py-5">
+        <div class="flex justify-left gap-2 py-5 px-3">
             <img class="w-10 h-10 rounded-full ring-primary ring-offset-base-100 ring ring-offset-2" src="${video.authors[0].profile_picture}" alt="">
             <div>
                 <h2 class="font-semibold text-base color-[#171717]">${video.title}</h2>
@@ -126,7 +126,7 @@ const displayVideos = (videos) => {
                 <p class="text-[#17171770] text-sm">${video.others.views} </p>
             </div>
         </div>
-        <button onclick="loadVideoDetails('${video.video_id}')" class="btn btn-block">Show Details</button>
+        <button onclick="loadVideoDetails('${video.video_id}')" class="btn btn-block border-none">Show Details</button>
         `
         boxContainer.appendChild(createDiv);
     });
